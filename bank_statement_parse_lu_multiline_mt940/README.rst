@@ -1,14 +1,13 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: License: AGPL-3
 
-Import MT940 IBAN ING Bank Statements
-=====================================
+Import MT940 Luxembourg Multipline Bank Statements
+==================================================
 
-This module allows you to import the MT940 IBAN files from the Dutch ING bank
-in Odoo as bank statements.
+This module allows you to import the MT940 files from the Luxembourg 
+Multiline system in Odoo as bank statements.
 The specifications are published at:
-    https://www.ing.nl/media/ING_ming_mt940s_24_juli_tcm162-46356.pdf
-and were last updated august 2014.
+    https://www.multiline.lu/fileadmin/media/downloads/MT940_V2_fr.pdf
 
 Known issues / Roadmap
 ======================
@@ -30,8 +29,7 @@ Credits
 Contributors
 ------------
 
-* Stefan Rijnhart <srijnhart@therp.nl>
-* Ronald Portier <rportier@therp.nl>
+* Stéphane Bidoul <stephane.bidoul@acsone.eu>
 
 Maintainer
 ----------

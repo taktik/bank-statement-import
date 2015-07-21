@@ -1,12 +1,7 @@
 # -*- encoding: utf-8 -*-
-"""Test import of bank statement for MT940 BNP Parisbas Fortis Luxembourg."""
 ##############################################################################
 #
-#    Copyright (C) 2015 Therp BV <http://therp.nl>.
-#
-#    All other contributions are (C) by their respective contributors
-#
-#    All Rights Reserved
+#    Copyright (C) 2015 ACSONE SA/NV <http://acsone.eu>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,3 +17,5 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+
+"""Test import of bank statement for MT940 Luxembourg Multiline."""
