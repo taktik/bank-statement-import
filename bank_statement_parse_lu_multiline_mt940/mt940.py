@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2014-2015 Therp BV <http://therp.nl>.
+#    Copyright (C) 2015 ACSONE SA/NV <http://acsone.eu>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
@@ -18,8 +18,7 @@
 #
 ##############################################################################
 
-"""Implement BankStatementParser for MT940 IBAN BNP
-Paribas Fortis Luxembourg files."""
+"""Implement BankStatementParser for MT940 Luxembourg Multiline."""
 
 import re
 import logging
@@ -31,8 +30,7 @@ _logger = logging.getLogger(__name__)
 
 
 class MT940Parser(MT940):
-    """Parser for BNP Parisbas Fortis Luxembourg MT940
-    bank statement import files."""
+    """Parser for MT940 Luxembourg Multiline bank statement import files."""
 
     tag_61_regex = re.compile(
         r'^(?P<date>\d{6})'
@@ -49,7 +47,7 @@ class MT940Parser(MT940):
         super(MT940Parser, self).__init__()
         self.header_regex = "^:20:BGLMT940"
         self.header_lines = 1
-        self.mt940_type = 'BNP Parisbas Fortis Luxembourg'
+        self.mt940_type = 'Luxembourg Multiline'
 
     def handle_tag_25(self, data):
         self.current_statement.local_account = data.split('/')[1]

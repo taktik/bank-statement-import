@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2013-2015 Therp BV <http://therp.nl>
+#    Copyright (C) 2015 ACSONE SA/NV <http://acsone.eu>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
@@ -17,7 +17,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-"""Parse a MT940 BNP Paribas Fortis Luxembourg file."""
+
+"""Parse a MT940 Luxembourg Multiline file."""
 
 import logging
 
@@ -36,13 +37,12 @@ class AccountBankStatementImport(models.TransientModel):
         """Parse a MT940 IBAN ING file."""
         parser = Parser()
         try:
-            _logger.debug("Try parsing with MT940 IBAN "
-                          "BNP Paribas Fortis Luxembourg.")
+            _logger.debug("Try parsing with MT940 Luxembourg Multiline.")
             return parser.parse(data_file)
         except ValueError:
             # Returning super will call next candidate:
-            _logger.debug("Statement file was not a MT940 IBAN "
-                          "BNP Paribas Fortis Luxembourg.",
+            _logger.debug("Statement file was not a "
+                          "MT940 Luxembourg Multiline.",
                           exc_info=True)
             return super(AccountBankStatementImport, self)._parse_file(
                 cr, uid, data_file, context=context)
