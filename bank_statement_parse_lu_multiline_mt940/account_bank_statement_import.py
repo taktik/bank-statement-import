@@ -34,7 +34,7 @@ class AccountBankStatementImport(models.TransientModel):
     _inherit = 'account.bank.statement.import'
 
     def _parse_file(self, cr, uid, data_file, context=None):
-        """Parse a MT940 IBAN ING file."""
+        """Parse a MT940 Luxembourg Multiline file."""
         parser = Parser()
         try:
             _logger.debug("Try parsing with MT940 Luxembourg Multiline.")

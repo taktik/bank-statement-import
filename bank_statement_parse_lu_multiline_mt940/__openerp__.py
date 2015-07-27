@@ -25,10 +25,7 @@
     'website': 'https://github.com/OCA/bank-statement-import',
     'category': 'Banking addons',
     'depends': [
-        'bank_statement_parse_mt940'
-    ],
-    'demo': [
-        'demo/demo_data.xml',
+        'account_bank_statement_import_mt940_base'
     ],
     'installable': True
 }

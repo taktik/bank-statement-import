@@ -23,7 +23,7 @@
 import re
 import logging
 
-from openerp.addons.bank_statement_parse_mt940.mt940 import (
+from openerp.addons.account_bank_statement_import_mt940_base.mt940 import (
     MT940, str2amount, get_subfields, handle_common_subfields)
 
 _logger = logging.getLogger(__name__)
